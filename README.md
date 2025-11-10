@@ -33,12 +33,37 @@ After handling any request, the microservice(Response):
 - quote_folder = "Quote Folder"
 - quote_path = os.path.join(quote_folder, 'quote.txt')
 
-# 1. Ensure the directory exists
-- os.makedirs(quote_folder)
+1. Ensure the directory exists
+  - os.makedirs(quote_folder)
 
-# 2. Write the request command to the quote file
-- request_command = "random" # For example, request a random quote
-- with open(quote_path, 'w', encoding="utf-8") as file:
+ 2. Write the request command to the quote file
+  - request_command = "random" # For example, request a random quote
+  - with open(quote_path, 'w', encoding="utf-8") as file:
   - file.write(request_command)
-- print(f"Request sent. Awaiting for response...")
+  - print(f"Request sent. Awaiting for response...")
 
+# Programmatic Receive Example
+- import os
+- import time
+- quote_folder = "Quote Folder"
+ -response_path = os.path.join(quote_folder, 'response.txt')
+
+1. Wait for a short time to allow the microservice to process the request
+time.sleep(1) 
+
+2. Read the response from the response file
+- try:
+    - with open(response_path, 'r', encoding="utf-8") as file:
+    - response_data = file.read()
+    
+ 3. Clear the response file after reading 
+    - with open(response_path, 'w', encoding="utf-8") as file:
+    - file.write("")
+
+ 4.  Response was written
+     - with open(response_path, 'w', encoding="utf-8") as file:
+     - file.write(response)
+- print(f"Response was written :\n--- RESPONSE ---\n{response_data}\n----------------")
+
+- except FileNotFoundError:
+    print("Error: Response file does not exist.")
