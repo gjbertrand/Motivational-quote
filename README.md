@@ -27,3 +27,18 @@ add What we do in life echoes in eternity.
 After handling any request, the microservice(Response):
 -	Writes the response to response.txt.
 -	Clears quote.txt (sets it to an empty string).
+
+# Programmatic Request Example
+- import os
+- quote_folder = "Quote Folder"
+- quote_path = os.path.join(quote_folder, 'quote.txt')
+
+# 1. Ensure the directory exists
+- os.makedirs(quote_folder)
+
+# 2. Write the request command to the quote file
+- request_command = "random" # For example, request a random quote
+- with open(quote_path, 'w', encoding="utf-8") as file:
+  - file.write(request_command)
+- print(f"Request sent. Awaiting for response...")
+
