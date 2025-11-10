@@ -67,3 +67,8 @@ time.sleep(1)
 
 - except FileNotFoundError:
     print("Error: Response file does not exist.")
+
+ # ULM Sequence Diagram
+<img width="1002" height="1675" alt="Inspirational Quote UML-Final Version" src="https://github.com/user-attachments/assets/1bc72cb9-4dc1-4093-b907-c2526f9720e2" />
+
+
