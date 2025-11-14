@@ -69,6 +69,7 @@ time.sleep(1)
     print("Error: Response file does not exist.")
 
  # ULM Sequence Diagram
-<img width="1002" height="1675" alt="Inspirational Quote UML-Final Version" src="https://github.com/user-attachments/assets/1bc72cb9-4dc1-4093-b907-c2526f9720e2" />
+<img width="1002" height="1646" alt="Inspirational Quote UML-Final Version-Revised" src="https://github.com/user-attachments/assets/1817b14f-2a3c-45ed-883e-786cb51277ae" />
+
 
 
