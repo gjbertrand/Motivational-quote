@@ -49,7 +49,7 @@ ________________________________________
 The Quote Folder directory and both text files will be created automatically by the microservice if they do not already exist.
 Any existing text in quote.txt is overwritten at startup by the microservice.
 # EXAMPLE REQUEST WITH PYTHON
-# Recommended imports
+```# Recommended imports
 import os  # required unless the file path is hardcoded
 
 # get file path to quote.txt
@@ -62,6 +62,7 @@ command = "random"
 # “call” to the Microservice (write the command to quote.txt)
 with open(file_path, "w", encoding="utf-8") as file:
     file.write(command)
+```
 ________________________________________
 
 # RECEIVING THE RESPONSE FROM THE MICROSERVICE
