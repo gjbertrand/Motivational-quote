@@ -73,7 +73,7 @@ After processing the request, the microservice:
 •	Clears quote.txt (sets it to an empty string)
 
 # EXAMPLE  RECEIVE CALL WITH PYTHON
-# imports required for this microservice call
+```# imports required for this microservice call
 import time
 import os  # required unless path is hardcoded
 
@@ -92,6 +92,7 @@ with open(file_path, "r", encoding="utf-8") as file:
     response = file.read()
 
 print(response)
+```
 ________________________________________
 # REAL WORLD EXAMPLE CALL AND RETURN VALUE
 Suppose a user wants to request all quotes from the microservice.
@@ -100,7 +101,7 @@ They would use the following code to:
 2.	Wait for the microservice to process it
 3.	Read the response
 Example Code:
-import os
+```import os
 import time
 
 # get file paths
@@ -123,6 +124,7 @@ with open(response_path, "r", encoding="utf-8") as file:
     quotes = file.read()
 
 print(quotes)
+```
 ________________________________________
 # Example Call Made (quote.txt contents):
 
